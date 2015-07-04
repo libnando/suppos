@@ -1,0 +1,35 @@
+<div class="container">
+<div class="row">
+	<div class="col-md-12">
+		<h1>Tickets</h1>
+		{{#each p in model}}
+
+		<div class="bs-callout bs-callout-warning">
+
+			<div class="row">
+  				<div class="col-sm-12">
+    				<div class="row col-details">
+    					<div class="col-md-3">
+        					<span> {{p.id}} </span>
+      					</div>
+      					<div class="col-md-3">
+        					{{p.title}}
+      					</div>
+      					<div class="col-md-3">
+        					<span> {{p.requester.email}} </span>
+      					</div>
+      					<div class="col-md-3 col-btn">
+        					<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-list-alt"></span></button>
+      					</div>
+    				</div>
+    				<p>{{p.description}}</p>
+  				</div>
+			</div>
+						
+  		</div>
+		
+		{{/each}}
+	</div>
+		{{outlet}}
+</div>
+</div>
